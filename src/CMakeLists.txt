@@ -4,4 +4,8 @@ include_directories(
     ../include
 )
 
-add_library(file_navigation STATIC path/ListFilesAndFolders.cpp)
+add_library(
+    file_navigation STATIC 
+    path/ListFilesAndFolders.cpp
+    path/IsFile.cpp
+)
