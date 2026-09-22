@@ -11,8 +11,13 @@ int main()
     {
         std::cout << fileOrFolder << std::endl;
     }
+    
+    std::cout << "-----------------------" << std::endl;
+
     std::cout << "../main.cpp is a file? '" << std::boolalpha << path::IsFile("../main.cpp") << "'" << std::endl;
     std::cout << "../main.cppc is a file? '" << std::boolalpha << path::IsFile("../main.cppc") << "'" << std::endl;
+    
+    std::cout << "-----------------------" << std::endl;
 
     std::cout 
         << "File extension of 'main.cpp' should equal to 'cpp'? '" 
@@ -21,6 +26,7 @@ int main()
         << "'" 
         << std::endl;
 
+
     std::cout 
         << "File extension of '/opt/share/myfile.d/text' should equal to ''? '" 
         << std::boolalpha 
@@ -28,6 +34,7 @@ int main()
         << "'" 
         << std::endl;
 
+        
     std::cout 
         << "File extension of '.gitignore' should equal to ''? '" 
         << std::boolalpha 
