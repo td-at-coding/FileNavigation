@@ -3,6 +3,7 @@
 #include "path/IsFile.h"
 #include "text/GetFileExtension.h"
 #include "path/IsDirectory.h"
+#include "text/GetFileName.h"
 
 int main()
 {
@@ -49,4 +50,28 @@ int main()
     std::cout << "../main.cpp is a directory? '" << std::boolalpha << path::IsDirectory("../main.cpp") << "'" << std::endl;
     std::cout << "./hello is a directory? '" << std::boolalpha << path::IsDirectory("./hello") << "'" << std::endl;
 
+    std::cout << "-----------------------" << std::endl;
+
+        std::cout 
+        << "File name of 'main.cpp' should equal to 'main'? '" 
+        << std::boolalpha 
+        << (text::GetFileName("main.cpp") == "main") 
+        << "'" 
+        << std::endl;
+
+
+    std::cout 
+        << "File name of '/opt/share/myfile.d/text' should equal to 'text'? '" 
+        << std::boolalpha 
+        << (text::GetFileName("/opt/share/myfile.d/text") == "text") 
+        << "'" 
+        << std::endl;
+
+        
+    std::cout 
+        << "File name of '.gitignore' should equal to '.gitignore'? '" 
+        << std::boolalpha 
+        << (text::GetFileName(".gitignore") == ".gitignore") 
+        << "'" 
+        << std::endl;
 }

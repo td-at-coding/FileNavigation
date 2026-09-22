@@ -10,4 +10,5 @@ add_library(
     path/IsFile.cpp
     text/GetFileExtension.cpp
     path/IsDirectory.cpp
+    text/GetFileName.cpp
 )
