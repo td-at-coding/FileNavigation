@@ -2,7 +2,7 @@
 #include "path/ListFilesAndFolders.h"
 #include "path/IsFile.h"
 #include "text/GetFileExtension.h"
-
+#include "path/IsDirectory.h"
 
 int main()
 {
@@ -41,4 +41,12 @@ int main()
         << (text::GetFileExtension(".gitignore") == "") 
         << "'" 
         << std::endl;
+
+            
+    std::cout << "-----------------------" << std::endl;
+
+    std::cout << ".. is a directory? '" << std::boolalpha << path::IsDirectory("..") << "'" << std::endl;
+    std::cout << "../main.cpp is a directory? '" << std::boolalpha << path::IsDirectory("../main.cpp") << "'" << std::endl;
+    std::cout << "./hello is a directory? '" << std::boolalpha << path::IsDirectory("./hello") << "'" << std::endl;
+
 }

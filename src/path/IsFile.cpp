@@ -13,7 +13,7 @@ namespace path
            !(attributes & FILE_ATTRIBUTE_DIRECTORY));
 #else 
     struct stat buffer;   
-    return (stat (filePath.c_str(), &buffer) == 0); 
+    return (stat (filePath.c_str(), &buffer) == 0);
 #endif
     }
 }
