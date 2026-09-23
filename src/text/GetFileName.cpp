@@ -24,7 +24,9 @@ namespace text
                 }
                 else 
                 {
-                    return filePath.substr(slashPos+1, dotPos - slashPos+1 );
+                    auto extensionLength = filePathLength - dotPos;
+                    auto nameLength = filePathLength - (slashPos+1) - extensionLength;
+                    return filePath.substr(slashPos+1, nameLength );
                 }
             }
             else if(dotPos == 0)

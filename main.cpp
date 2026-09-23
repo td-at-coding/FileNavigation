@@ -52,7 +52,7 @@ int main()
 
     std::cout << "-----------------------" << std::endl;
 
-        std::cout 
+    std::cout 
         << "File name of 'main.cpp' should equal to 'main'? '" 
         << std::boolalpha 
         << (text::GetFileName("main.cpp") == "main") 
@@ -73,5 +73,25 @@ int main()
         << std::boolalpha 
         << (text::GetFileName(".gitignore") == ".gitignore") 
         << "'" 
+        << std::endl;
+        
+    std::cout 
+        << "File name of '/home/' should equal to ''? '" 
+        << std::boolalpha 
+        << (text::GetFileName("/home/") == "") 
+        << "'" 
+        << std::endl;
+    std::cout 
+        << "File name of '/home/Documents/main.cpp' should equal to 'main'? '" 
+        << std::boolalpha 
+        << (text::GetFileName("/home/Documents/main.cpp") == "main") 
+        << "'"
+        << std::endl;
+    
+    std::cout 
+        << "File name of '/home/Documents/maths.mate' should equal to 'maths'? '" 
+        << std::boolalpha 
+        << (text::GetFileName("/home/Documents/maths.mate") == "maths") 
+        << "'"
         << std::endl;
 }
