@@ -4,6 +4,7 @@
 #include "text/GetFileExtension.h"
 #include "path/IsDirectory.h"
 #include "text/GetFileName.h"
+#include "path/FindFilesByName.h"
 
 int main()
 {
@@ -94,4 +95,14 @@ int main()
         << (text::GetFileName("/home/Documents/maths.mate") == "maths") 
         << "'"
         << std::endl;
+
+    
+    std::cout << "-----------------------" << std::endl;
+
+
+    for(const auto& name : path::FindFilesByName("../testsDirectory", "file"))
+    {
+        std::cout << name << std::endl;
+    }
+
 }
