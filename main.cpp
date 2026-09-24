@@ -5,11 +5,12 @@
 #include "path/IsDirectory.h"
 #include "text/GetFileName.h"
 #include "path/FindFilesByName.h"
+#include "path/FindFilesByExtension.h"
 
 int main()
 {
     auto filesAndFolders = path::ListFilesAndFolders("..");
-    for(auto& fileOrFolder : filesAndFolders)
+    for(const auto& fileOrFolder : filesAndFolders)
     {
         std::cout << fileOrFolder << std::endl;
     }
@@ -105,4 +106,11 @@ int main()
         std::cout << name << std::endl;
     }
 
+    std::cout << "-----------------------" << std::endl;
+
+
+    for(const auto& name : path::FindFilesByExtension("../testsDirectory", "txt"))
+    {
+        std::cout << name << std::endl;
+    }
 }
