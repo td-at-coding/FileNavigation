@@ -6,6 +6,7 @@
 #include "text/GetFileName.h"
 #include "path/FindFilesByName.h"
 #include "path/FindFilesByExtension.h"
+#include "text/GetFileDirectory.h"
 
 int main()
 {
@@ -113,4 +114,29 @@ int main()
     {
         std::cout << name << std::endl;
     }
+
+    std::cout << "-----------------------" << std::endl;
+
+    
+    std::cout 
+        << "File directory of '/home/Documents/maths.mate' should equal to '/home/Documents'? '" 
+        << std::boolalpha 
+        << (text::GetFileDirectory("/home/Documents/maths.mate") == "/home/Documents") 
+        << "'" 
+        << std::endl;
+
+    std::cout 
+        << "File directory of 'file.txt' should equal to '.'? '" 
+        << std::boolalpha 
+        << (text::GetFileDirectory("file.txt") == ".") 
+        << "'" 
+        << std::endl;
+
+    std::cout 
+        << "File directory of '../documents/file.txt' should equal to '../documents'? '" 
+        << std::boolalpha 
+        << (text::GetFileDirectory("../documents/file.txt") == "../documents") 
+        << "'" 
+        << std::endl;
+
 }
