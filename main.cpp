@@ -126,9 +126,9 @@ int main()
         << std::endl;
 
     std::cout 
-        << "File directory of 'file.txt' should equal to '.'? '" 
+        << "File directory of 'file.txt' should equal to ''? '" 
         << std::boolalpha 
-        << (text::GetFileDirectory("file.txt") == ".") 
+        << (text::GetFileDirectory("file.txt") == "") 
         << "'" 
         << std::endl;
 

@@ -9,7 +9,7 @@ namespace text
 
         if(slashPos == std::string::npos)
         {
-            return ".";
+            return "";
         }
         else 
         {
