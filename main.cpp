@@ -8,6 +8,8 @@
 #include "path/FindFilesByExtension.h"
 #include "text/GetFileDirectory.h"
 #include "utils/FindAll.h"
+#include "path/FindSubString.h"
+
 int main()
 {
     auto filesAndFolders = path::ListFilesAndFolders("..");
@@ -152,4 +154,24 @@ int main()
     {
         std::cout << "\tAt pos = " << pos << std::endl;
     }
+
+    std::cout << "Find all twos in string '11111'" << std::endl;
+    for(const auto& pos : utils::FindAll("11111", "2"))
+    {
+        std::cout << "\tAt pos = " << pos << std::endl;
+    }
+
+    std::cout << "-----------------------" << std::endl;
+
+    std::cout << "Find all files containing '#include <string>' in '../'" << std::endl;
+    for(const auto& subString : path::FindSubString("..", "#include <string>"))
+    {
+        std::cout 
+            << "File: " << subString.fileName 
+            << ", line: " << subString.line 
+            << ", start pos: " << subString.start 
+            << ", substring: '" << subString.subString << "'"
+            << std::endl;
+    }
+
 }

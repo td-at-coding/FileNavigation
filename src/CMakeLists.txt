@@ -16,4 +16,5 @@ add_library(
     path/FindFilesByExtension.cpp
     text/GetFileDirectory.cpp
     utils/FindAll.cpp
+    path/FindSubString.cpp
 )
