@@ -15,4 +15,5 @@ add_library(
     utils/ToLower.cpp
     path/FindFilesByExtension.cpp
     text/GetFileDirectory.cpp
+    utils/FindAll.cpp
 )

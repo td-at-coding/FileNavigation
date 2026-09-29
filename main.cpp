@@ -7,7 +7,7 @@
 #include "path/FindFilesByName.h"
 #include "path/FindFilesByExtension.h"
 #include "text/GetFileDirectory.h"
-
+#include "utils/FindAll.h"
 int main()
 {
     auto filesAndFolders = path::ListFilesAndFolders("..");
@@ -139,4 +139,17 @@ int main()
         << "'" 
         << std::endl;
 
+    std::cout << "-----------------------" << std::endl;
+
+    std::cout << "Find all ones in string '11111'" << std::endl;
+    for(const auto& pos : utils::FindAll("11111", "1"))
+    {
+        std::cout << "\tAt pos = " << pos << std::endl;
+    }
+    
+    std::cout << "Find all elevens in string '11111'" << std::endl;
+    for(const auto& pos : utils::FindAll("11111", "11"))
+    {
+        std::cout << "\tAt pos = " << pos << std::endl;
+    }
 }
