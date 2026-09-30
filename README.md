@@ -2,7 +2,7 @@
 A simple cross platform C++11 file navigation library.
 
 To Compile the library run the following commands:
-\`\`\`bash
+```bash
 # Create a directory named build
 mkdir build
 
@@ -11,4 +11,4 @@ cd build
 
 # And then build the cmake project
 cmake ..
-\`\`\`
+```
