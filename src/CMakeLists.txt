@@ -6,15 +6,15 @@ include_directories(
 
 add_library(
     file_navigation STATIC 
-    path/ListFilesAndFolders.cpp
-    path/IsFile.cpp
-    text/GetFileExtension.cpp
-    path/IsDirectory.cpp
-    text/GetFileName.cpp
-    path/FindFilesByName.cpp
-    utils/ToLower.cpp
-    path/FindFilesByExtension.cpp
-    text/GetFileDirectory.cpp
-    utils/FindAll.cpp
-    path/FindSubString.cpp
+    nav/path/ListFilesAndFolders.cpp
+    nav/path/IsFile.cpp
+    nav/text/GetFileExtension.cpp
+    nav/path/IsDirectory.cpp
+    nav/text/GetFileName.cpp
+    nav/path/FindFilesByName.cpp
+    nav/utils/ToLower.cpp
+    nav/path/FindFilesByExtension.cpp
+    nav/text/GetFileDirectory.cpp
+    nav/utils/FindAll.cpp
+    nav/path/FindSubString.cpp
 )

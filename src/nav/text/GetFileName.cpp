@@ -1,5 +1,7 @@
-#include "text/GetFileName.h"
+#include "nav/text/GetFileName.h"
 
+namespace nav
+{
 namespace text 
 {
     std::string GetFileName(const std::string& filePath)
@@ -57,4 +59,5 @@ namespace text
             }
         }
     }
+}
 }

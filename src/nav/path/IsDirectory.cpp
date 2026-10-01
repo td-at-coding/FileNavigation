@@ -1,8 +1,10 @@
-#include "path/IsDirectory.h"
+#include "nav/path/IsDirectory.h"
 #if defined(__linux__) or defined(__APPLE__)
 #include <sys/stat.h>
 #endif
 
+namespace nav
+{
 namespace path
 {
     bool IsDirectory(const std::string& directoryPath)
@@ -10,7 +12,7 @@ namespace path
 #ifdef _WIN32
     DWORD attributes = GetFileAttributesA(directoryPath.c_str());
     return (attributes != INVALID_FILE_ATTRIBUTES && 
-           (attributes & FILE_ATTRIBUTE_DIRECTORY));
+            (attributes & FILE_ATTRIBUTE_DIRECTORY));
 #else 
     struct stat info;
 
@@ -22,4 +24,5 @@ namespace path
     return (info.st_mode & S_IFDIR) != 0; 
 #endif
     }
+}
 }

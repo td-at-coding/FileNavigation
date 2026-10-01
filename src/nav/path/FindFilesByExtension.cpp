@@ -1,9 +1,11 @@
-#include "path/FindFilesByExtension.h"
-#include "path/ListFilesAndFolders.h"
-#include "path/IsFile.h"
-#include "path/IsDirectory.h"
-#include "text/GetFileExtension.h"
+#include "nav/path/FindFilesByExtension.h"
+#include "nav/path/ListFilesAndFolders.h"
+#include "nav/path/IsFile.h"
+#include "nav/path/IsDirectory.h"
+#include "nav/text/GetFileExtension.h"
 
+namespace nav
+{
 namespace path 
 {
     std::vector<std::string> FindFilesByExtension(const std::string& directory, const std::string& extension)
@@ -27,4 +29,5 @@ namespace path
         }
         return res;
     }
+}
 }

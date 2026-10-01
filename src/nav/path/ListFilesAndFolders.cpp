@@ -1,4 +1,4 @@
-#include "path/ListFilesAndFolders.h"
+#include "nav/path/ListFilesAndFolders.h"
 #ifdef _WIN32
 #include <windows.h>
 #else
@@ -8,7 +8,8 @@
 #include <stdexcept>
 #include <sstream>
 
-
+namespace nav
+{
 namespace path
 {
     std::vector<std::string> ListFilesAndFolders(const std::string& folder)
@@ -66,4 +67,5 @@ namespace path
 
         return filesAndFolders;
     }
+}    
 }

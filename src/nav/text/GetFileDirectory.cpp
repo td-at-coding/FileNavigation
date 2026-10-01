@@ -1,6 +1,7 @@
-#include "text/GetFileDirectory.h"
+#include "nav/text/GetFileDirectory.h"
 
-
+namespace nav 
+{
 namespace text 
 {
     std::string GetFileDirectory(const std::string& filePath)
@@ -16,4 +17,5 @@ namespace text
             return filePath.substr(0,slashPos);
         }
     }
+}
 }

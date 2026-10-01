@@ -1,14 +1,16 @@
 #include <iostream>
-#include "path/ListFilesAndFolders.h"
-#include "path/IsFile.h"
-#include "text/GetFileExtension.h"
-#include "path/IsDirectory.h"
-#include "text/GetFileName.h"
-#include "path/FindFilesByName.h"
-#include "path/FindFilesByExtension.h"
-#include "text/GetFileDirectory.h"
-#include "utils/FindAll.h"
-#include "path/FindSubString.h"
+#include "nav/path/ListFilesAndFolders.h"
+#include "nav/path/IsFile.h"
+#include "nav/text/GetFileExtension.h"
+#include "nav/path/IsDirectory.h"
+#include "nav/text/GetFileName.h"
+#include "nav/path/FindFilesByName.h"
+#include "nav/path/FindFilesByExtension.h"
+#include "nav/text/GetFileDirectory.h"
+#include "nav/utils/FindAll.h"
+#include "nav/path/FindSubString.h"
+
+using namespace nav;
 
 int main()
 {

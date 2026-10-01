@@ -1,7 +1,7 @@
-#include "utils/ToLower.h"
+#include "nav/utils/ToLower.h"
 
-
-
+namespace nav
+{
 namespace utils
 {
     std::string ToLower(const std::string& value)
@@ -14,4 +14,5 @@ namespace utils
         }
         return res;
     }
+}
 }

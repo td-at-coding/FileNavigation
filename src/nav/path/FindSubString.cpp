@@ -1,10 +1,12 @@
-#include "path/FindSubString.h"
-#include "path/ListFilesAndFolders.h"
-#include "path/IsFile.h"
-#include "path/IsDirectory.h"
+#include "nav/path/FindSubString.h"
+#include "nav/path/ListFilesAndFolders.h"
+#include "nav/path/IsFile.h"
+#include "nav/path/IsDirectory.h"
 #include <fstream>
-#include "utils/FindAll.h"
+#include "nav/utils/FindAll.h"
 
+namespace nav
+{
 namespace path
 {
     std::vector<utils::FileSubString> FindSubString(const std::string &directory, const std::string &subString)
@@ -38,4 +40,5 @@ namespace path
         }
         return subStrings;
     }
+}
 }

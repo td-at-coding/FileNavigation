@@ -1,6 +1,8 @@
-#include "text/GetFileExtension.h"
-#include "path/IsFile.h"
+#include "nav/text/GetFileExtension.h"
+#include "nav/path/IsFile.h"
 
+namespace nav
+{
 namespace text
 {
     std::string GetFileExtension(const std::string& filePath)
@@ -23,4 +25,5 @@ namespace text
         }
         else return filePath.substr(dotPos+1);
     }
+}
 }

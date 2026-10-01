@@ -1,8 +1,10 @@
-#include "path/IsFile.h"
+#include "nav/path/IsFile.h"
 #if defined(__linux__) or defined(__APPLE__)
 #include <sys/stat.h>
 #endif
 
+namespace nav
+{
 namespace path
 {
     bool IsFile(const std::string& filePath)
@@ -10,7 +12,7 @@ namespace path
 #ifdef _WIN32
     DWORD attributes = GetFileAttributesA(filePath.c_str());
     return (attributes != INVALID_FILE_ATTRIBUTES && 
-           !(attributes & FILE_ATTRIBUTE_DIRECTORY));
+            !(attributes & FILE_ATTRIBUTE_DIRECTORY));
 #else 
     struct stat buffer;   
     if (stat(filePath.c_str(), &buffer) != 0) 
@@ -21,4 +23,5 @@ namespace path
     return (buffer.st_mode & S_IFREG) != 0;
 #endif
     }
+}
 }

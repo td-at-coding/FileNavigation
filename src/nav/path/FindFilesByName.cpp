@@ -1,10 +1,12 @@
-#include "path/FindFilesByName.h"
-#include "path/ListFilesAndFolders.h"
-#include "path/IsFile.h"
-#include "path/IsDirectory.h"
-#include "text/GetFileName.h"
-#include "utils/ToLower.h"
+#include "nav/path/FindFilesByName.h"
+#include "nav/path/ListFilesAndFolders.h"
+#include "nav/path/IsFile.h"
+#include "nav/path/IsDirectory.h"
+#include "nav/text/GetFileName.h"
+#include "nav/utils/ToLower.h"
 
+namespace nav
+{
 namespace path
 {
     std::vector<std::string> FindFilesByName(
@@ -37,3 +39,5 @@ namespace path
         return res;
     }
 }
+}
+
