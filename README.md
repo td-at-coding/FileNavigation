@@ -6,9 +6,12 @@ To Compile the library run the following commands:
 # Create a directory named build
 mkdir build
 
-# go into the build directory
+# Go into the build directory
 cd build
 
-# And then build the cmake project
+# And then configure the cmake project
 cmake ..
+
+# Finally, build the project!
+make
 ```
