@@ -1,14 +1,6 @@
 #include <iostream>
-#include "nav/path/ListFilesAndFolders.h"
-#include "nav/path/IsFile.h"
-#include "nav/text/GetFileExtension.h"
-#include "nav/path/IsDirectory.h"
-#include "nav/text/GetFileName.h"
-#include "nav/path/FindFilesByName.h"
-#include "nav/path/FindFilesByExtension.h"
-#include "nav/text/GetFileDirectory.h"
+#include "FileNavigation.h"
 #include "nav/utils/FindAll.h"
-#include "nav/path/FindSubString.h"
 
 using namespace nav;
 
