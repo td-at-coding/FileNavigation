@@ -1,6 +1,7 @@
 #include <iostream>
 #include "FileNavigation.h"
 #include "nav/utils/FindAll.h"
+#include "nav/path/FindFilesByMultipleExtensions.h"
 
 using namespace nav;
 
@@ -168,4 +169,10 @@ int main()
             << std::endl;
     }
 
+    std::cout << "-----------------------" << std::endl;
+
+    for(const auto& name : path::FindFilesByMultipleExtensions("../testsDirectory", {"txt", "png"}))
+    {
+        std::cout << name << std::endl;
+    }
 }
