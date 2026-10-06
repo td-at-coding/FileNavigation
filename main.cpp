@@ -171,7 +171,7 @@ int main()
 
     std::cout << "-----------------------" << std::endl;
 
-    for(const auto& name : path::FindFilesByMultipleExtensions("../testsDirectory", {"txt", "png"}))
+    for(const auto& name : path::FindFilesByMultipleExtensions("../testsDirectory", {"txt", "mypng"}))
     {
         std::cout << name << std::endl;
     }
