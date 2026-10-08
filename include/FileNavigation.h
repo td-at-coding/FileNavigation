@@ -8,6 +8,7 @@
 #include "nav/path/IsDirectory.h"
 #include "nav/path/IsFile.h"
 #include "nav/path/ListFilesAndFolders.h"
+#include "nav/path/FindFilesByMultipleExtensions.h"
 
 // nav::text
 #include "nav/text/GetFileDirectory.h"

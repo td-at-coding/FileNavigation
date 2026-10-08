@@ -17,6 +17,7 @@ int main()
 
     std::cout << "../main.cpp is a file? '" << std::boolalpha << path::IsFile("../main.cpp") << "'" << std::endl;
     std::cout << "../main.cppc is a file? '" << std::boolalpha << path::IsFile("../main.cppc") << "'" << std::endl;
+    std::cout << ".. is a file? '" << std::boolalpha << path::IsFile("..") << "'" << std::endl;
     
     std::cout << "-----------------------" << std::endl;
 
