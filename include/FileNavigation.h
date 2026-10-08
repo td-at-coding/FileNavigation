@@ -14,3 +14,4 @@
 #include "nav/text/GetFileDirectory.h"
 #include "nav/text/GetFileExtension.h"
 #include "nav/text/GetFileName.h"
+#include "nav/text/GetFileBaseName.h"

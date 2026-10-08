@@ -1,7 +1,6 @@
 #include <iostream>
 #include "FileNavigation.h"
 #include "nav/utils/FindAll.h"
-#include "nav/path/FindFilesByMultipleExtensions.h"
 
 using namespace nav;
 
@@ -176,4 +175,20 @@ int main()
     {
         std::cout << name << std::endl;
     }
+
+    std::cout 
+        << "File base name of 'main.cpp' should equal to 'main.cpp'? '" 
+        << std::boolalpha 
+        << (text::GetFileBaseName("main.cpp") == "main.cpp") 
+        << "'" 
+        << std::endl;
+
+    std::cout 
+        << "File base name of '/home/user/main.cpp' should equal to 'main.cpp'? '" 
+        << std::boolalpha 
+        << (text::GetFileBaseName("/home/user/main.cpp") == "main.cpp") 
+        << "'" 
+        << std::endl;
+
+
 }

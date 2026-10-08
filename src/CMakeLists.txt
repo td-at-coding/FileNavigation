@@ -18,4 +18,5 @@ add_library(
     nav/utils/FindAll.cpp
     nav/path/FindSubString.cpp
     nav/path/FindFilesByMultipleExtensions.cpp
+    nav/text/GetFileBaseName.cpp
 )
